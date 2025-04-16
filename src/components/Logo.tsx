@@ -46,8 +46,8 @@ const Logo: React.FC = () => {
               <path d="M35 30 L50 50 L65 30 L60 55 L35 55 Z" fill="white" />
               <circle cx="42" cy="40" r="3" fill="black" />
               <circle cx="58" cy="40" r="3" fill="black" />
-            </g>
-          </svg>
+            </svg>
+          </div>
         </div>
       </div>
       <span className="text-xl font-bold tracking-tight">Maxwell Shop</span>
