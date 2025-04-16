@@ -33,62 +33,53 @@ const Hero = () => {
           
           <div className="flex-1 max-w-md">
             <div className="relative">
-              <div className="aspect-square bg-muted rounded-lg overflow-hidden p-8 flex items-center justify-center">
-                <div className="relative w-full max-w-[300px] h-auto">
-                  <svg
-                    viewBox="0 0 300 300"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-full h-full"
-                  >
-                    {/* Большой кот-логотип для главной страницы */}
-                    <circle cx="150" cy="150" r="120" fill="currentColor" />
+              <div className="aspect-square flex items-center justify-center">
+                <div className="w-72 h-72 relative animate-logo-rotate">
+                  <svg viewBox="0 0 300 300" className="w-full h-full">
+                    <circle cx="150" cy="150" r="145" fill="black" stroke="white" strokeWidth="3" />
                     
-                    {/* Уши */}
-                    <path
-                      d="M75 75L105 120L135 75Z"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      strokeWidth="6"
-                    />
-                    <path
-                      d="M225 75L195 120L165 75Z"
-                      fill="currentColor" 
-                      stroke="currentColor"
-                      strokeWidth="6"
-                    />
+                    <g className="origin-center">
+                      {/* Розовые полосы */}
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#FF69B4" transform="rotate(0 150 150)" />
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#FF69B4" transform="rotate(180 150 150)" />
+                      
+                      {/* Желтые полосы */}
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#FFD700" transform="rotate(45 150 150)" />
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#FFD700" transform="rotate(225 150 150)" />
+                      
+                      {/* Синие полосы */}
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#1E90FF" transform="rotate(90 150 150)" />
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#1E90FF" transform="rotate(270 150 150)" />
+                      
+                      {/* Бирюзовые полосы */}
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#20B2AA" transform="rotate(135 150 150)" />
+                      <path d="M150 0 L170 0 L170 300 L150 300 Z" fill="#20B2AA" transform="rotate(315 150 150)" />
+                    </g>
                     
-                    {/* Глаза */}
-                    <circle className="animate-cat-blink" cx="105" cy="135" r="15" fill="white" />
-                    <circle className="animate-cat-blink" cx="195" cy="135" r="15" fill="white" />
+                    {/* Острые выступы */}
+                    <g>
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#FF69B4" transform="translate(300, 0)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#FFD700" transform="translate(300, 0) rotate(45 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#1E90FF" transform="translate(300, 0) rotate(90 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#20B2AA" transform="translate(300, 0) rotate(135 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#FF69B4" transform="translate(300, 0) rotate(180 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#FFD700" transform="translate(300, 0) rotate(225 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#1E90FF" transform="translate(300, 0) rotate(270 0 150)" />
+                      <path d="M0 150 L-30 135 L-15 150 L-30 165 Z" fill="#20B2AA" transform="translate(300, 0) rotate(315 0 150)" />
+                    </g>
                     
-                    {/* Нос */}
-                    <path
-                      d="M150 165L135 180H165L150 165Z"
-                      fill="white"
-                    />
+                    {/* Центральный круг с котом */}
+                    <circle cx="150" cy="150" r="105" fill="black" />
                     
-                    {/* Усы */}
-                    <line x1="135" y1="180" x2="75" y2="165" stroke="white" strokeWidth="3" />
-                    <line x1="135" y1="186" x2="75" y2="186" stroke="white" strokeWidth="3" />
-                    <line x1="135" y1="192" x2="75" y2="207" stroke="white" strokeWidth="3" />
-                    
-                    <line x1="165" y1="180" x2="225" y2="165" stroke="white" strokeWidth="3" />
-                    <line x1="165" y1="186" x2="225" y2="186" stroke="white" strokeWidth="3" />
-                    <line x1="165" y1="192" x2="225" y2="207" stroke="white" strokeWidth="3" />
-                    
-                    {/* Подпись */}
-                    <text 
-                      x="150" 
-                      y="250" 
-                      textAnchor="middle" 
-                      fill="white" 
-                      fontSize="24" 
-                      fontWeight="bold"
-                    >
-                      MAXWELL SHOP
-                    </text>
-                  </svg>
+                    {/* Силуэт кота белым цветом */}
+                    <path d="M105 90 L150 150 L195 90 L180 165 L105 165 Z" fill="white" />
+                    <circle cx="126" cy="120" r="9" fill="black" />
+                    <circle cx="174" cy="120" r="9" fill="black" />
+                  </g>
+                </svg>
+                
+                <div className="absolute bottom-0 w-full text-center text-white text-2xl font-bold">
+                  MAXWELL SHOP
                 </div>
               </div>
             </div>

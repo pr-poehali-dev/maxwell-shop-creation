@@ -29,6 +29,10 @@ const config = {
           primary: "#000000",
           secondary: "#ffffff",
           accent: "#333333",
+          pink: "#FF69B4",
+          yellow: "#FFD700",
+          blue: "#1E90FF",
+          teal: "#20B2AA"
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -77,17 +81,16 @@ const config = {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.05)" },
         },
-        "cat-blink": {
-          "0%, 100%": { opacity: "1" },
-          "95%": { opacity: "1" },
-          "97.5%": { opacity: "0" },
-        },
+        "logo-rotate": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "button-pulse": "button-pulse 2s infinite",
-        "cat-blink": "cat-blink 4s infinite",
+        "logo-rotate": "logo-rotate 20s linear infinite",
       },
     },
   },

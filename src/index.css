@@ -85,4 +85,16 @@
   .card-maxwell {
     @apply bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:shadow-md;
   }
+  
+  .maxwell-gradient-border {
+    @apply relative rounded-lg p-[2px] overflow-hidden;
+    background: linear-gradient(45deg, #FF69B4, #FFD700, #1E90FF, #20B2AA);
+  }
+  
+  .maxwell-gradient-text {
+    @apply font-bold;
+    background: linear-gradient(45deg, #FF69B4, #FFD700, #1E90FF, #20B2AA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
