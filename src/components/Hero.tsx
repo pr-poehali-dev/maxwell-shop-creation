@@ -75,8 +75,8 @@ const Hero = () => {
                     <path d="M105 90 L150 150 L195 90 L180 165 L105 165 Z" fill="white" />
                     <circle cx="126" cy="120" r="9" fill="black" />
                     <circle cx="174" cy="120" r="9" fill="black" />
-                  </g>
-                </svg>
+                  </svg>
+                </div>
                 
                 <div className="absolute bottom-0 w-full text-center text-white text-2xl font-bold">
                   MAXWELL SHOP
